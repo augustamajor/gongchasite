@@ -64,39 +64,58 @@
       }
     });  
 
-/*
+
     // CONTACT FORM
     $("#contact-form").submit(function (e) {
       e.preventDefault();
+      if (this.checkValidity() === false) {
+        return e.stopPropagation();
+      }
+      /**
+       * the name property of the input field is used to identify the form
+       * you can use the name property of the input field to send the form data to the server
+       * or you could use the id property of the input field
+       * `$(this).serialize()` method is used to get the form data
+       */
       var name = $("#cf-name").val();
       var email = $("#cf-email").val();
       var subject = $("#cf-subject").val();
       var message = $("#cf-message").val();
       var dataString = 'name=' + name + '&email=' + email + '&subject=' + subject + '&message=' + message;
-
       function isValidEmail(emailAddress) {
           var pattern = new RegExp(/^((([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+(\.([a-z]|\d|[!#\$%&'\*\+\-\/=\?\^_`{\|}~]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])+)*)|((\x22)((((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(([\x01-\x08\x0b\x0c\x0e-\x1f\x7f]|\x21|[\x23-\x5b]|[\x5d-\x7e]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(\\([\x01-\x09\x0b\x0c\x0d-\x7f]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF]))))*(((\x20|\x09)*(\x0d\x0a))?(\x20|\x09)+)?(\x22)))@((([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|\d|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.)+(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])|(([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])([a-z]|\d|-|\.|_|~|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])*([a-z]|[\u00A0-\uD7FF\uF900-\uFDCF\uFDF0-\uFFEF])))\.?$/i);
           return pattern.test(emailAddress);
       };
-      if (isValidEmail(email) && (message.length > 1) && (name.length > 1)) {
-          $.ajax({
-              type: "POST",
-              url: "email.php",
-              data: dataString,
-              success: function () {
-                  $('.text-success').fadeIn(1000);
-                  $('.text-danger').fadeOut(500);
-              }
-          });
+      function handleMessage(type, message) {
+        const formMessage = $('#form-message');
+        formMessage.html('');
+        formMessage.addClass(`text-${type}`);
+        formMessage.html(message);
+        formMessage.fadeIn(1000);
       }
-      else {
-          $('.text-danger').fadeIn(1000);
-          $('.text-success').fadeOut(500);
+      if (!isValidEmail(email)){
+        handleMessage('danger', 'Please enter a valid email address');
+        return e.stopPropagation();
+      } 
+      if(name.length <= 1) {
+        handleMessage('danger', 'Name too short');
+        return e.stopPropagation();
       }
-      return false;
+      if(subject.length <= 1) {
+        handleMessage('danger', 'Subject too short');
+        return e.stopPropagation();
+      }
+      if(message.length <= 1){
+        handleMessage('danger', 'Message too short');
+        return e.stopPropagation();
+      }
+      $.ajax({
+          type: "POST",
+          url: "email.php",
+          data: dataString,
+          success: handleMessage('success', 'Your message has been sent successfully.')
+      });
     });
-
-*/
 
 
     // SMOOTHSCROLL
