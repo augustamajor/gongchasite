@@ -158,51 +158,86 @@ http://www.templatemo.com/tm-515-eatery
        PRE LOADER              
   -----------------------------------------*/
 
-  .preloader {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: 99999;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: center;
-    align-items: center;
-    background: none repeat scroll 0 0 #ffffff;
+  .preloader{
+    display:-webkit-box;
+    display:-ms-flexbox;
+    display:flex;
+    -webkit-box-pack:center;
+    -ms-flex-pack:center;
+    justify-content:center;
+    -webkit-box-align:center;
+    -ms-flex-align:center;
+    align-items:center;
+    position:fixed;
+    z-index:10000;
+    left:0; top:0;
+    width:100%; height:100vh;
+    overflow:hidden;
+    background-color:#fff;
+    animation: loading 0s 1s forwards infinite;
   }
 
-  .spinner {
-    border: 1px solid transparent;
-    border-radius: 3px;
-    position: relative;
+  @keyframes loading  { 
+    to { 
+      display: hidden; 
+    } 
   }
 
-  .spinner:before {
-    content: '';
-    box-sizing: border-box;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 45px;
-    height: 45px;
-    margin-top: -10px;
-    margin-left: -10px;
-    border-radius: 50%;
-    border: 1px solid #575757;
-    border-top-color: #ffffff;
-    animation: spinner .9s linear infinite;
+  .load {
+    position:relative
   }
-
-  @-webkit-@keyframes spinner {
-    to {transform: rotate(360deg);}
+  .load:after,
+  .load:before {
+    content:"";
+    display:block;
+    position:absolute;
+    left:50%;top:0;
+    -webkit-transform:translateX(-50%);
+    -ms-transform:translateX(-50%);
+    transform:translateX(-50%);
+    width:35px;height:70px;
+    border-radius:9px
   }
-
-  @keyframes spinner {
-    to {transform: rotate(360deg);}
+  .load:before {
+    background-color:#c32032
   }
-
-
+  .load:after {
+    width:36px;
+    top:-1px;
+    height:72px;
+    -webkit-animation: fill-up 2s forwards infinite;
+    animation: fill-up 2s forwards infinite
+  }
+  .load svg {
+    display:block;
+    position:relative;
+    z-index:1;
+    width:80px
+  }
+  .load svg 
+  .st1 {
+    fill:#fff
+  }
+  @-webkit-keyframes fill-up {
+    0% {
+      -webkit-box-shadow:inset 0 0 0 0 #e4d2bc;
+      box-shadow:inset 0 0 0 0 #e4d2bc
+    }
+    100% {
+      -webkit-box-shadow:inset 0 -72px 0 0 #e4d2bc;
+      box-shadow:inset 0 -72px 0 0 #e4d2bc
+    }
+  }
+  @keyframes fill-up {
+    0% {
+      -webkit-box-shadow:inset 0 0 0 0 #e4d2bc;
+      box-shadow:inset 0 0 0 0 #e4d2bc
+    }
+    100% {
+      -webkit-box-shadow:inset 0 -72px 0 0 #e4d2bc;
+      box-shadow:inset 0 -72px 0 0 #e4d2bc
+    }
+  }
 
   /*---------------------------------------
       MENU              
@@ -767,7 +802,7 @@ http://www.templatemo.com/tm-515-eatery
   }
 
   footer strong {
-    color: #d9d9d9;
+    color: #797676;
   }
 
   footer address p {
@@ -818,6 +853,11 @@ http://www.templatemo.com/tm-515-eatery
     color: #f9f9f9;
   }
 
+footer img{
+    margin-top: -5px;
+    width: 85%;
+}
+
 
 
   /*---------------------------------------
@@ -826,7 +866,7 @@ http://www.templatemo.com/tm-515-eatery
 
   .social-icon {
     position: relative;
-    padding: 0;
+    padding: 20px;
     margin: 0;
   }
 
@@ -839,7 +879,7 @@ http://www.templatemo.com/tm-515-eatery
   .social-icon li a {
     border-radius: 100px;
     color: #ce3232;
-    font-size: 15px;
+    font-size: 20px;
     width: 35px;
     height: 35px;
     line-height: 35px;

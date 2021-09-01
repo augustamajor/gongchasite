@@ -125,6 +125,11 @@ hr {
 pre {
     overflow: auto
 }
+.copyright-text {
+    padding: 15px 0px;
+    margin-bottom: -5%;
+    font-size: 15px;
+}
 
 code,
 kbd,
@@ -7856,6 +7861,9 @@ button.close {
     .visible-xs-inline-block {
         display: inline-block!important
     }
+    .center-footer {
+        text-align: center;
+     }
 }
 
 @media (min-width:768px) and (max-width:991px) {
@@ -7872,11 +7880,17 @@ button.close {
     th.visible-sm {
         display: table-cell!important
     }
+    .center-footer {
+       text-align: center;
+    }
 }
 
 @media (min-width:768px) and (max-width:991px) {
     .visible-sm-block {
         display: block!important
+    }
+     .center-footer {
+       text-align: center;
     }
 }
 
