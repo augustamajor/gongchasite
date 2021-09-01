@@ -461,25 +461,47 @@ section {
       FAQ              
 -----------------------------------------*/
 
+.faq h3 {
+    margin-left: 100px;
+}
+
 .faq-question {
-    margin-bottom: 0.9em;
-    margin-top: 0.9em;
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .faq-answer {
-    margin-bottom: 0.9em;
-    margin-top: 0.9em;
-    margin-right: 150px;
-    margin-left: 150px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .faq-container {
-    margin-bottom: 0.9em;
-    margin-top: 0.9em;
-    margin-right: 150px;
+    margin-bottom: 1em;
+    margin-top: 1em;
+    margin-left: 100px;
+    margin-right: 100px;
+}
+
+
+/* background-image: url(../images/gongchafaq.png); */
+
+.faq-slider {
+    background-image: url(../images/gongchafaq.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: local;
+    background-size: cover;
+    filter: brightness(120%);
+    height: 650px;
+}
+
+.faq-bannerwords {
     margin-left: 150px;
+    margin-bottom: 240px;
 }
 
 
