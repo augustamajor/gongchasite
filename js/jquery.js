@@ -15,6 +15,7 @@
         p = /^-ms-/,
         q = /-([\da-z])/gi,
         r = function(a, b) { return b.toUpperCase() };
+
     n.fn = n.prototype = {
         jquery: m,
         constructor: n,

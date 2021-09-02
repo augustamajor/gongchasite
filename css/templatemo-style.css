@@ -58,6 +58,7 @@ p {
 }
 
 
+
 /*---------------------------------------
      GENERAL               
   -----------------------------------------*/
@@ -330,16 +331,16 @@ section {
       HOME              
   -----------------------------------------*/
 
-#home {
+#home{
     padding: 0;
 }
 
-#home h1 {
+#home #menu h1 {
     color: #ffffff;
     padding-bottom: 30px;
 }
 
-#home h3 {
+#home #menu h3 {
     color: #f9f9f9;
     font-size: 14px;
     line-height: inherit;
@@ -364,6 +365,7 @@ section {
 .owl-theme .owl-dots .owl-dot {
     display: block;
 }
+
 
 .owl-theme .owl-dots .owl-dot span {
     width: 12px;
@@ -543,7 +545,7 @@ section {
   -----------------------------------------*/
 
 #menu {
-    padding-bottom: 0;
+    padding-bottom: 50;
 }
 
 #menu .container {
@@ -631,6 +633,28 @@ section {
 
 .menu-thumb:hover .menu-info {
     background: rgba(0, 0, 0, 0.8);
+}
+
+#menu .item-menu-header {
+    background-image: url(../images/header-menu.jpeg);
+
+}
+/*---------------------------------------
+      DRINK MENU              
+  -----------------------------------------*/
+#drinks-menu{
+    padding: 50px;
+    align-items: center;
+    background-color: #f5eee8;
+}
+
+.category-heading{
+    text-align: center;
+    background: #e5ded8;
+    text-transform: uppercase;
+    margin: 0;
+    padding: 10px 0;
+    font-weight: 600;
 }
 
 
