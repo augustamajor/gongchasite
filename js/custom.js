@@ -81,7 +81,7 @@
       if (isValidEmail(email) && (message.length > 1) && (name.length > 1)) {
           $.ajax({
               type: "POST",
-              url: "contact.php",
+              url: "php/contact.php",
               data: dataString,
               success: function () {
                   $('.text-success').fadeIn(1000);
