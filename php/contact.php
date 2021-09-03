@@ -17,7 +17,7 @@ $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
 
   //
  mail( "gongchatampa@gmail.com", $_POST['subject'], $_POST['message'], $headers );
-
+ echo "Thank you";
 
 }
 ?>
