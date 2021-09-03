@@ -1,4 +1,4 @@
-<!-- <?php
+/* <?php
 // Email Submit
 // Note: filter_var() requires PHP >= 5.2.0
 if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
@@ -21,7 +21,7 @@ $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
 
 }
 ?>
- -->
+*/
 
 <?php
 // Email Submit
