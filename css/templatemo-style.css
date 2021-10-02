@@ -136,7 +136,7 @@ section {
 #google-map iframe {
     border: 0;
     width: 100%;
-    height: 390px;
+    height: 400px;
 }
 
 
@@ -787,7 +787,6 @@ section {
     text-align: center;
     background-color: #f5eee8;
 }
-
 #menu {
     padding-bottom: 50;
 }
@@ -1036,6 +1035,7 @@ footer img {
     #google-map,
     .footer-info {
         margin-bottom: 50px;
+        margin-right: 100px;
     }
 }
 @media only screen and (min-width: 768px) and (max-width: 991px) {
