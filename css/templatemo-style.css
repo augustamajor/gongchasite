@@ -782,14 +782,24 @@ section {
       DRINK MENU              
   -----------------------------------------*/
 #drinks-menu {
-    padding: 50px;
+    padding-bottom: 50;
     align-items: center;
+    text-align: center;
     background-color: #f5eee8;
+}
+
+#menu {
+    padding-bottom: 50;
+}
+#drinks-menu .container {
+    width: 90%;
+}
+#drinks-menu .col-md-4 {
+    margin: 0;
+    padding: 0;
 }
 .category-heading {
     text-align: center;
-    background: #e5ded8;
-    text-transform: uppercase;
     margin: 0;
     padding: 10px 0;
     font-weight: 600;
@@ -1063,7 +1073,6 @@ footer img {
     .top-nav-collapse .navbar-brand {
         color: #252525;
         font-weight: 600;
-        x
     }
     
     .custom-navbar .nav li a,

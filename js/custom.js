@@ -41,6 +41,7 @@
 
     // MAGNIFIC POPUP
     $('.image-popup').magnificPopup({
+        delegate: 'a',
         type: 'image',
         removalDelay: 300,
         mainClass: 'mfp-with-zoom',
@@ -112,5 +113,16 @@
 
     // WOW ANIMATION
     new WOW({ mobile: false }).init();
+        /*******************************
+    * ACCORDION WITH TOGGLE ICONS
+    *******************************/
+      function toggleIcon(e) {
+        $(e.target)
+            .prev('.panel-heading')
+            .find(".more-less")
+            .toggleClass('glyphicon-plus glyphicon-minus');
+    }
+    $('.panel-group').on('hidden.bs.collapse', toggleIcon);
+    $('.panel-group').on('shown.bs.collapse', toggleIcon);
 
 })(jQuery);
