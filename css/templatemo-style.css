@@ -447,19 +447,8 @@ section {
     height: 650px;
 }
 
-
-/* .slider .item-first {
-    background-image: url(../images/gongchafaq.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-attachment: local;
-    background-size: cover;
-    filter: brightness(120%);
-    height: 650px;
-} */
-
 .slider .item-first {
-    background-image: url(../images/halloweenbanner.png);
+    background-image: url(../images/gongchafaq.png);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: local;
