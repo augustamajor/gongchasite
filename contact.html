@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head></head>
+<title>Gong Cha FAQ</title>
+<script src=" js/faq.js "></script>
+<script src=" js/send-email-ajax.js "></script>
+
+
+<meta charset="UTF-8">
+<meta http-equiv="X-UA-Compatible" content="IE=Edge">
+<meta name="description" content="">
+<meta name="keywords" content="">
+<meta name="author" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+<link rel="stylesheet" href="css/bootstrap.min.css">
+<link rel="stylesheet" href="css/font-awesome.min.css">
+<link rel="stylesheet" href="css/animate.css">
+<link rel="stylesheet" href="css/owl.carousel.css">
+<link rel="stylesheet" href="css/owl.theme.default.min.css">
+<link rel="stylesheet" href="css/magnific-popup.css">
+
+<!-- MAIN CSS -->
+<link rel="stylesheet" href="css/templatemo-style.css">
+
+</head>
+
+<body>
+
+    <!-- PRE LOADER -->
+    <section class="preloader">
+        <div class="spinner">
+
+            <span class="spinner-rotate"></span>
+
+        </div>
+    </section>
+
+
+    <!-- MENU -->
+    <section class="navbar custom-navbar navbar-fixed-top" role="navigation">
+        <div class="container">
+
+            <div class="navbar-header">
+                <button class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                         <span class="icon icon-bar"></span>
+                    </button>
+
+                <!-- lOGO TEXT HERE -->
+                <a href="index.html" class="navbar-brand"> <img src="images/gongchalogo.png" alt="Gong cha" style="position:relative; left: 40px; top: -15px;" width="110" height="55"></a>
+            </div>
+
+            <!-- MENU LINKS -->
+            <div class="collapse navbar-collapse">
+                <ul class="nav navbar-nav navbar-nav-first">
+                    <li><a href="index.html" class="smoothScroll">Home</a></li>
+                    <li><a href="index.html#about" class="smoothScroll">About</a></li>
+                    <li><a href="index.html#new" class="smoothScroll">New</a></li>
+                    <li><a href="index.html#menu" class="smoothScroll">Menu</a></li>
+                    <li><a href="faq.html" class="smoothScroll">FAQ</a></li>
+                </ul>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><a href="tel:8132497733">Call Now!  <i class="fa fa-phone"></i>  (813) 249-7733</a></li>
+                    <a href="faq.html#footer" class="section-btn">Order Info</a>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- TOP BANNER -->
+    <section id="home" class="slider" data-stellar-background-ratio="0.5">
+        <div class="contact-slider">
+            <div class=" row ">
+                <div class="owl-carousel owl-theme ">
+                    <div class="item item-first ">
+                        <div class="caption ">
+                            <div class="contact-bannerwords ">
+                                <div class=" col-md-8 col-sm-12 ">
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!--edit contact php in here -->
+    <section id="contact" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+
+                <div class="col-md-6 col-sm-12">
+
+                    <div class="col-md-12 col-sm-12">
+                        <div class="section-title wow fadeInUp" data-wow-delay="0.1s">
+                            <h2>Have questions?</h2>
+                        </div>
+                    </div>
+
+                    <!-- CONTACT FORM -->
+                    <form action="php/contact.php" method="post" class="wow fadeInUp" id="contact-form" role="form" data-wow-delay="0.8s">
+                        <!-- IF MAIL SENT SUCCESSFUL  // connect this with custom JS -->
+                        <!--<h6 class="text-success">Your message has been sent successfully.</h6> -->
+
+                        <!-- IF MAIL NOT SENT -->
+
+                        <h6 class="text-danger">E-mail must be valid and message must be longer than 1 character.</h6>
+
+                        <div class="col-md-6 col-sm-6">
+                            <input type="text" class="form-control" id="cf-name" name="name" placeholder="Full name">
+                        </div>
+
+                        <div class="col-md-6 col-sm-6">
+                            <input type="email" class="form-control" id="cf-email" name="email" placeholder="Email address">
+                        </div>
+
+                        <div class="col-md-12 col-sm-12">
+                            <input type="text" class="form-control" id="cf-subject" name="subject" placeholder="Subject">
+
+                            <textarea class="form-control" rows="6" id="cf-message" name="message" placeholder="Tell us your thoughts!"></textarea>
+
+                            <button type="submit" class="form-control" id="cf-submit" name="submit">Send Message</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer id="footer" data-stellar-background-ratio="0.5">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4 col-sm-5 center-footer">
+                    <div class="section-title">
+                        <h2 class="wow fadeInUp" data-wow-delay="0.2s">
+                            <!-- lOGO -->
+                            <a href="index.html"> <img src="images/gongchalogo.png" alt="Gong cha"></a>
+                        </h2>
+                    </div>
+                </div>
+
+                <!-- SNS -->
+                <div class="col-md-1 col-sm-3 center-footer">
+                    <ul class="wow fadeInUp social-icon" data-wow-delay="0.4s">
+                        <li>
+                            <a href="https://www.facebook.com/GongChaTampa/" target="_blank" class="fa fa-facebook-square" attr="facebook icon"></a>
+                        </li>
+                        <li>
+                            <a href="https://instagram.com/gongchatampa?utm_medium=copy_link" target="_blank" class="fa fa-instagram"></a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-1 col-sm-3"></div>
+
+                <!-- Open Hours -->
+                <div class="col-md-3 col-sm-8 center-footer">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s">Open Hours</h2>
+                        </div>
+                        <address class="wow fadeInUp" data-wow-delay="0.4s">
+                                <strong>Everyday</strong>
+                                <p>11:00 AM - 9:00 PM</p>
+                              </address>
+                    </div>
+                </div>
+
+                <!-- Find us -->
+                <div class="col-md-3 col-sm-8 center-footer">
+                    <div class="footer-info">
+                        <div class="section-title">
+                            <h2 class="wow fadeInUp" data-wow-delay="0.2s">Find us</h2>
+                        </div>
+                        <address class="wow fadeInUp" data-wow-delay="0.4s">
+                            <p><strong>Address</strong><br> 4025 W Waters Ave<br>Tampa, FL 33614</p>
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Copyright  -->
+        <div class="wow fadeInUp copyright-text text-center" data-wow-delay="0.2s">
+            <p><br>Copyright &copy; 2021 Gong Cha Tampa</p>
+        </div>
+    </footer>
+
+
+    <!-- SCRIPTS -->
+
+    <script src="js/jquery.js "></script>
+    <script src="js/bootstrap.min.js "></script>
+    <script src="js/jquery.stellar.min.js "></script>
+    <script src="js/wow.min.js "></script>
+    <script src="js/owl.carousel.min.js "></script>
+    <script src="js/jquery.magnific-popup.min.js "></script>
+    <script src="js/smoothscroll.js "></script>
+    <script src="js/custom.js "></script>
+    <script src=" js/faq.js "></script>
+    <script src=" js/send-email-ajax.js "></script>
+
+</body>
+
+</html>
+
+</html>

@@ -1,4 +1,7 @@
 /* <?php
+//git add .
+//git commit -m [message]
+//git push origin update:master
 // Email Submit
 // Note: filter_var() requires PHP >= 5.2.0
 if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
