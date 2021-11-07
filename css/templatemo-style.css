@@ -952,12 +952,13 @@ section {
     box-shadow: none;
     font-size: 14px;
     font-weight: normal;
-    margin-bottom: 50px;
+    margin-bottom: 15px;
     transition: all ease-in-out 0.4s;
 }
 #contact .form-control:hover,
 #contact .form-control:focus {
     border-bottom-color: #c9c9c9;
+    padding-bottom: 50px;
 }
 #contact input {
     height: 55px;
