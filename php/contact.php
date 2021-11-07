@@ -29,18 +29,18 @@ $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
 <?php
 // Email Submit
 // Note: filter_var() requires PHP >= 5.2.0
-// if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
+if ( isset($_POST['email']) && isset($_POST['name']) && isset($_POST['subject']) && isset($_POST['message']) && filter_var($_POST['email'], FILTER_VALIDATE_EMAIL) ) {
  
 //   // detect & prevent header injections
-//   $test = "/(content-type|bcc:|cc:|to:)/i";
-//   foreach ( $_POST as $key => $val ) {
-//     if ( preg_match( $test, $val ) ) {
-//       exit;
-//     }
-//   }
+  $test = "/(content-type|bcc:|cc:|to:)/i";
+  foreach ( $_POST as $key => $val ) {
+    if ( preg_match( $test, $val ) ) {
+      exit;
+    }
+  }
 
-// $headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
-//     'Reply-To: ' . $_POST["email"] . "\r\n" .
+$headers = 'From: ' . $_POST["name"] . '<' . $_POST["email"] . '>' . "\r\n" .
+    'Reply-To: ' . $_POST["email"] . "\r\n" .
 //     'X-Mailer: PHP/' . phpversion();
 
 $name = $_POST['name'];
@@ -65,7 +65,7 @@ $Body .= "\n";
 
 
 //send email
-//$success = mail( $EmailTo, $_POST['subject'], $_POST['message'], $headers );
+$success = mail( $EmailTo, $_POST['subject'], $_POST['message'], $headers );
 
 // send email
 $success = mail($EmailTo, $Subject, $Body, "From:".$email);
