@@ -952,7 +952,7 @@ section {
     box-shadow: none;
     font-size: 14px;
     font-weight: normal;
-    margin-bottom: 15px;
+    margin-bottom: 50px;
     transition: all ease-in-out 0.4s;
 }
 #contact .form-control:hover,
@@ -969,7 +969,6 @@ section {
     color: #ffffff;
     font-weight: bold;
     height: 50px;
-    padding-bottom: 50px;
 }
 #contact button#cf-submit:hover {
     background: #292929;
