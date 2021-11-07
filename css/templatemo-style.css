@@ -969,6 +969,7 @@ section {
     color: #ffffff;
     font-weight: bold;
     height: 50px;
+    padding-bottom: 50px;
 }
 #contact button#cf-submit:hover {
     background: #292929;
