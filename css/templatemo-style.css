@@ -937,8 +937,8 @@ section {
       CONTACT             
   -----------------------------------------*/
 #contact .section-title {
-    padding-top: 100px;
-    padding-bottom: 100px;
+    padding-top: 50px;
+    padding-bottom: 0px;
 }
 #contact .text-success,
 #contact .text-danger {
